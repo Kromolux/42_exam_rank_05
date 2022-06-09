@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 11:05:23 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 12:43:03 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:40:25 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,11 @@ void	SpellBook::forgetSpell(std::string const & spellName)
 	}
 }
 
-ASpell *	SpellBook::createSpell(std::string const & spellName)
+ASpell *	SpellBook::createSpell(std::string const & spellName) const
 {
-	std::map<std::string, ASpell *>::iterator it = this->spellBook.find(spellName);
+	std::map<std::string, ASpell *>::const_iterator it = this->spellBook.find(spellName);
 
-	if (it != this->spellBook.end())
+	if (it != this->spellBook.cend())
 	{
 		return (it->second->clone());
 	}

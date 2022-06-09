@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:09:15 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 12:24:00 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:39:14 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Warlock
 {
 	public:
 
-		Warlock(std::string const newName, std::string const newTitle);
+		Warlock(std::string const & newName, std::string const & newTitle);
 		~Warlock(void);
 
 		std::string const & getName(void) const;
@@ -34,8 +34,8 @@ class Warlock
 		void	introduce(void) const;
 
 		void	learnSpell(ASpell * spell);
-		void	forgetSpell(std::string spellName);
-		void	launchSpell(std::string spellName, ATarget const & target);
+		void	forgetSpell(std::string const & spellName);
+		void	launchSpell(std::string const & spellName, ATarget const & target) const;
 
 	protected:
 

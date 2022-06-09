@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 10:56:48 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 12:17:27 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:40:06 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class SpellBook
 
 		void		learnSpell(ASpell * spell);
 		void		forgetSpell(std::string const & spellName);
-		ASpell *	createSpell(std::string const & spellName);
+		ASpell *	createSpell(std::string const & spellName) const;
 
 	protected:
 

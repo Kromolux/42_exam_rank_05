@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:21:50 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 10:39:47 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:42:22 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ int	main(void)
 	richard.launchSpell("Fwoosh", bob);
 
 	richard.forgetSpell("Fwoosh");
+		richard.learnSpell(fwoosh);
+			richard.learnSpell(fwoosh);
+				richard.learnSpell(fwoosh);
 	richard.launchSpell("Fwoosh", bob);
-
+	//delete fwoosh;
 	return (0);
 }

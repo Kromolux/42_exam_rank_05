@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:16:26 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 12:42:47 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 13:39:41 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Warlock::Warlock(void) {}
 
-Warlock::Warlock(std::string const newName, std::string const newTitle) : name(newName), title(newTitle)
+Warlock::Warlock(std::string const & newName, std::string const & newTitle) : name(newName), title(newTitle)
 {
 	std::cout << name << ": This looks like another boring day.\n";
 }
@@ -50,12 +50,12 @@ void	Warlock::learnSpell(ASpell * spell)
 		this->spellBook.learnSpell(spell);
 }
 
-void	Warlock::forgetSpell(std::string const spellName)
+void	Warlock::forgetSpell(std::string const & spellName)
 {
 	this->spellBook.forgetSpell(spellName);
 }
 
-void	Warlock::launchSpell(std::string spellName, ATarget const & target)
+void	Warlock::launchSpell(std::string const & spellName, ATarget const & target) const
 {
 	ASpell * castSpell = spellBook.createSpell(spellName);
 	

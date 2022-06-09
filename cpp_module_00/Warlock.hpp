@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:09:15 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 07:24:45 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/09 11:49:40 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Warlock
 {
 	public:
 
-		Warlock(std::string const newName, std::string const newTitle);
+		Warlock(std::string const & newName, std::string const & newTitle);
 		~Warlock(void);
 
 		std::string const & getName(void) const;
@@ -34,7 +34,7 @@ class Warlock
 	private:
 
 		Warlock(void);
-		Warlock(Warlock & obj);
+		Warlock(Warlock const & obj);
 		Warlock & operator=(Warlock const & rhs);
 		std::string		name;
 		std::string		title;
