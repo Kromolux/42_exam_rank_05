@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:56:31 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 08:50:46 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:25:58 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ ATarget::ATarget(std::string const newType) : type(newType)
 
 ATarget::ATarget(ATarget const & obj)
 {
+	std::cout << "copy constructor called\n";
 	this->type = obj.type;
 }
 

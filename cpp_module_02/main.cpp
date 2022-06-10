@@ -6,7 +6,7 @@
 /*   By: rkaufman <rkaufman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 07:21:50 by rkaufman          #+#    #+#             */
-/*   Updated: 2022/06/08 12:39:10 by rkaufman         ###   ########.fr       */
+/*   Updated: 2022/06/10 14:33:24 by rkaufman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,12 @@ int main()
 	Warlock richard("Richard", "foo");
 	richard.setTitle("Hello, I'm Richard the Warlock!");
 	BrickWall model1;
-
+	BrickWall test1(model1);
+	
 	Polymorph* polymorph = new Polymorph();
 	TargetGenerator tarGen;
 
-	tarGen.learnTargetType(&model1);
+	tarGen.learnTargetType(&test1);
 	richard.learnSpell(polymorph);
 
 	Fireball* fireball = new Fireball();
@@ -40,6 +41,7 @@ int main()
 	richard.launchSpell("Polymorph", *wall);
 	richard.launchSpell("Fireball", *wall);
 	delete wall;
-
+	delete fireball;
+	delete polymorph;
 	return (0);
 }
